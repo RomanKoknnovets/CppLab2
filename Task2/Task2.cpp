@@ -15,7 +15,7 @@ int main()
     res.print();
     cout << "Cуммы: ";
     for (int i = 0; i < 3; i++)
-        cout << "Столбец " << i+1 << ": "<< res.sumRow(i) << "; ";
+        cout << "Строка " << i+1 << ": "<< res.sumRow(i) << "; ";
     cout << endl;
     for (int i = 0; i < 3; i++)
         cout << "Столбец " << i+1 << ": Минимум: "<< res.minColumn(i) << "; Максимум: " << res.maxColumn(i) << endl;
@@ -28,7 +28,7 @@ int main()
     res1.print();
     cout << "Cуммы: ";
     for (int i = 0; i < res1.size; i++)
-        cout << "Столбец " << i+1 << ": " << res1.sumRow(i) << "; ";
+        cout << "Строка " << i+1 << ": " << res1.sumRow(i) << "; ";
     cout << endl;
     for (int i = 0; i < res1.size; i++)
         cout << "Столбец " << i + 1 << ": Минимум: " << res1.minColumn(i) << "; Максимум: " << res1.maxColumn(i) << endl;
