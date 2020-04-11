@@ -149,7 +149,6 @@
   <ItemGroup>
     <ClCompile Include="Matrix3x3.cpp" />
     <ClCompile Include="MatrixXnX.cpp" />
-    <ClCompile Include="SingleLinkedList.cpp" />
     <ClCompile Include="Task2.cpp" />
   </ItemGroup>
   <ItemGroup>

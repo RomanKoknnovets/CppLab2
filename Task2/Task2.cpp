@@ -35,7 +35,7 @@ int main()
     cout << "Сумма эл-в главной диагонали: " << res1.sumPrincipalDiag() << "; Побочной диагонали: " << res1.sumSecondaryDiag() << endl;
     cout << "Произведение эл-в главной диагонали: " << res1.productPrincipalDiag() << "; Побочной диагонали: " << res1.productSecondaryDiag() << endl << endl;
     //2 и 3
-    SingleLinkedList list;
+    SingleLinkedList<int> list;
     list.append(1);
     list.append(1);
     list.append(3);
