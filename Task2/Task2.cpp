@@ -50,8 +50,22 @@ int main()
     {
         cout << node->value << " ";
         node = node->next;
-    } //выведет 3 1
-    cout << endl << "Первые два элемента с конца: " << list.elementFromTheEnd(0) << " " << list.elementFromTheEnd(1); // выведет 1 3
+    }
+    cout << endl << "Первые два элемента с конца: " << list.elementFromTheEnd(1) << " " << list.elementFromTheEnd(2) << endl << endl;
+    SingleLinkedList<int> list1;
+    list1.append(1);
+    list1.append(2);
+    list1.append(3);
+    list1.append(5);
+    list1.append(4);
+    list1.append(1);
+    list1.append(2);
+    int count = list1.count;
+    cout << "Добавили по порядку числа 1 2 3 5 4 1 2; " << endl;
+    cout << "Количество элементов: " << count << endl;
+    cout << "elementFromTheEnd(1): " << list1.elementFromTheEnd(1) << endl;
+    cout << "elementFromTheEnd(2): " << list1.elementFromTheEnd(2) << endl;
+    cout << "elementFromTheEnd(3): " << list1.elementFromTheEnd(3) << endl;
     getchar();
 }
 

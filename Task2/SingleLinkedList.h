@@ -14,14 +14,16 @@ struct SingleLinkedList
     };
     int count = 0;
     SLListNode<T>* head = nullptr;
+    SLListNode<T>* tail = nullptr;
     void append(const T value)
     {
-        SLListNode<T>* newHead = new SLListNode<T>(value);
+        SLListNode<T>* newTail = new SLListNode<T>(value);
         if (head)
         {
-            newHead->next = head;
+            tail->next = newTail;
+            tail = newTail;
         }
-        head = newHead;
+        else head = tail = newTail;
         count++;
     }
     void distinct()
@@ -42,6 +44,7 @@ struct SingleLinkedList
                     else
                     {
                         node1->next = nullptr;
+                        tail = node1;
                         break;
                     }
                 }
@@ -50,12 +53,10 @@ struct SingleLinkedList
             selected = selected->next;
         }
     }
-    //так как не очень понятно, с конца это с какой стороны, то сделал с этой, т.к. от неё сложнее
-    //а с другой это функция element(int)
-    T elementFromTheEnd(const int backIndex) const
+    T elementFromTheEnd(const int number) const
     {
-        int normalIndex = count - backIndex - 1;
-        return element(normalIndex);
+        int index = count - number;
+        return element(index);
     }
     T element(const int index) const
     {
